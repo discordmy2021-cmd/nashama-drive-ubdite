@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+:root {
+  --primary-red: #e50914;
+  --primary-red-hover: #b91c1c;
+  --bg-dark: #09090b;
+}
+
+body {
+  font-family: 'Cairo', 'Tajawal', system-ui, -apple-system, sans-serif;
+  background-color: #08080a;
+  color: #ffffff;
+  direction: rtl;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #111116;
+}
+::-webkit-scrollbar-thumb {
+  background: #33333d;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e50914;
+}
+
+/* Glowing effects */
+.glow-red {
+  box-shadow: 0 0 30px -5px rgba(229, 9, 20, 0.45);
+}
+
+.glow-red-lg {
+  box-shadow: 0 0 50px -5px rgba(229, 9, 20, 0.6);
+}
+
+.text-glow {
+  text-shadow: 0 0 15px rgba(229, 9, 20, 0.6);
+}
+
+/* Smooth pulse animation for live GPS */
+@keyframes radar-pulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+.radar-ring {
+  animation: radar-pulse 2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+/* Phone Mockup Frame Styling */
+.phone-device {
+  border-radius: 44px;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.9), 0 0 0 3px #27272a, 0 0 0 6px #121215;
+  background: #09090b;
+}
